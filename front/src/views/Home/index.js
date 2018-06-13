@@ -1,21 +1,15 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 // import { bindActionCreators } from 'redux';
 // import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
+import { connect } from "react-redux";
 
 class Home extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      tmp: 'coucou',
-    };
+    this.state = {};
   }
   render() {
-    return (
-      <div>
-        {this.state.tmp}
-      </div>
-    );
+    return <div />;
   }
 }
 
@@ -27,4 +21,7 @@ function mapDispatchToProps(dispatch) {
   return Object.assign({ dispatch });
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Home);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Home);

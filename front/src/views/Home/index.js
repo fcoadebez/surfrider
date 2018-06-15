@@ -20,7 +20,7 @@ class Home extends Component {
 
   render() {
     return (
-      <div className="container">
+      <div className="container features">
         {this.state.homeContent.acf && this.state.homeContent.acf.blocs.map(bloc => {
             let blocElements = [];
             blocElements.push(<FeatureContainer bloc={ bloc } />);

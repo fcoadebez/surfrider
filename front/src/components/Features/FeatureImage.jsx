@@ -16,7 +16,7 @@ export default class FeatureImage extends Component {
   render() {
     console.log(this.props);
     return (
-      <div>
+      <div className="feature_images">
         {this.props.image.map(image => {
             let blocElements = [];
             blocElements.push(<img src={ image.image.url }/>);

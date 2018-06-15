@@ -1,3 +1,92 @@
 .nav {
-    background-color: red;
+    background-color: #131313;
+    padding: 19px 0;
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .links {
+            display: flex;
+            a {
+                padding: 12px;
+                margin: 5px;
+                background-color: #232323;
+                // font-family: RobotoCondensed-Regular;
+                font-size: 16px;
+                color: #232323;
+                letter-spacing: -1px;
+                text-decoration: none;
+                text-transform: uppercase;
+                display: flex;
+                align-items: center;
+                &.yellow {
+                    background-color: #FFCD3A;
+                    padding: 12px 24px;
+                }
+                img {
+                    width: 20px;
+                }
+            }
+        }
+    }
+}
+.subnav {
+    background-color: rgba(19,19,19,0.45);
+    padding: 12px 0;
+    a {
+        font-size: 16px;
+        color: #FFFFFF;
+        letter-spacing: 0;
+        text-transform: uppercase;
+        margin-right: 20px;
+        text-decoration: none;
+        opacity: 1;
+        transition: opacity 0.2s linear;
+        &:hover {
+            opacity: 0.6;
+        }
+    }
+}
+.title_container {
+    height: 1200px;
+    width: 100%;
+    background-image: url('../../assets/DESIGN/header_home.jpg');
+    background-position: bottom;
+    background-size: cover;
+    position: relative;
+    bottom: 43px;
+    z-index: -1;
+    display: flex;
+    justify-content: center;
+    .title {
+        position: relative;
+        top: 140px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h1 {
+            font-size: 48px;
+            color: #FFF;
+            letter-spacing: 0;
+            font-weight: 400;
+            margin-bottom: 0;
+            span {
+                font-weight: bold;
+            }
+        }
+        .separator {
+            width: 2px;
+            height: 52px;
+            background-color: #FFF;
+            margin: 20px 0;
+        }
+        p {
+            font-size: 16px;
+            color: #FFF;
+            text-transform: uppercase;
+        }
+    }
+}
+.logo {
+    height: 42px;
 }

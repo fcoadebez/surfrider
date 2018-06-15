@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Header from "../src/components/Header/Header";
+import "./styles/main.less";
 
 class App extends Component {
   render() {

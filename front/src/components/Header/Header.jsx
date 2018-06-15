@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import WordPress from "../../services/api/Wordpress";
+import "./header.less"
 
 export default class Header extends Component {
   constructor(props) {
@@ -17,11 +18,16 @@ export default class Header extends Component {
   render() {
     return (
       <div>
-        {this.state.nav.map(nav => {
-          let navElements = [];
-          navElements.push(nav.title);
-          return navElements;
-        })}
+        <header className="nav">
+        <div className="container">
+          {this.state.nav.map(nav => {
+            let navElements = [];
+            navElements.push(nav.title);
+            return navElements;
+          })}
+        </div>
+          
+        </header>
       </div>
     );
   }

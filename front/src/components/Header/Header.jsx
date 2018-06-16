@@ -57,8 +57,9 @@ export default class Header extends Component {
               {this.state.homeContent.acf && 
                 <h1 dangerouslySetInnerHTML={{ __html: this.state.homeContent.acf.title }}></h1>
               }
-              <div className="separator"></div>
+              
               <p>Commencer le voyage</p>
+              <div className="separator"></div>
             </div>
           </div>
 

@@ -14,9 +14,14 @@ export default class FeatureContent extends Component {
   };
 
   render() {
+
     return (
       <div className="feature_content">
-        <p dangerouslySetInnerHTML={{ __html: this.props.content }}></p>
+        <p dangerouslySetInnerHTML={{ __html: this.props.content.content }}></p>
+        { this.props.content.link &&
+          <a href={this.props.content.link.url}>{this.props.content.link.title}</a>
+        }
+
       </div>
     );
   }

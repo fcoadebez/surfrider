@@ -9,6 +9,7 @@ import store from './store';
 import App from './App';
 
 import Home from './views/Home';
+import Agir from './views/Agir';
 import Shop from './views/Shop';
 
 import './styles/index.css';
@@ -17,8 +18,9 @@ ReactDOM.render(<Provider store={store}>
   <HashRouter>
     <App>
       <Switch>
-        <Route exact="exact" path="/" component={Home}/>
-        <Route exact="exact" path="/shop" component={Shop}/>
+        <Route exact="exact" path="/" component={Home} />
+        <Route exact="exact" path="/agir" component={Agir} />
+        <Route exact="exact" path="/shop" component={Shop} />
       </Switch>
     </App>
   </HashRouter>

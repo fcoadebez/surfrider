@@ -16,6 +16,13 @@ class WordPress {
     );
     return homeContent.json();
   }
+
+  async getAgirContent() {
+    const agirContent = await fetch(
+      endPoints.basepath + "/wp-json/wp/v2/pages/77"
+    );
+    return agirContent.json();
+  }
 }
 
 export default new WordPress();

@@ -47,7 +47,7 @@
         }
     }
 }
-.title_container {
+.title_container_home {
     height: 1200px;
     width: 100%;
     background-image: url('../../assets/DESIGN/header_home.jpg');
@@ -92,6 +92,40 @@
             font-size: 16px;
             color: #FFF;
             text-transform: uppercase;
+        }
+    }
+}
+.title_container {
+    width: 100%;
+    background-position: bottom;
+    // background-image: url('../../assets/agir/header_fond.jpg');
+    background-size: cover;
+    position: relative;
+    bottom: 43px;
+    z-index: -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .title {
+        h1 {
+            font-size: 48px;
+            padding: 190px 0;
+            color: #FFF;
+            letter-spacing: 0;
+            font-weight: 400;
+            margin-bottom: 0;
+            text-transform: uppercase;
+            span {
+                font-weight: bold;
+            }
+            &:after {
+                display: block;
+                content:"";
+                width: 80px;
+                height: 10px;
+                margin: 20px auto;
+                background-color: #FFCD3A;
+            }
         }
     }
 }

@@ -8,41 +8,38 @@ export default class FeatureContainer extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      nav: []
+      nav: [],
+      scrollTop: 0
     };
   }
 
-  componentWillMount = () => {
-    
+  componentDidMount = () => {
+    this.setState({scrollTop: document.getElementById(this.props.id).getBoundingClientRect().top + window.pageYOffset});
   };
 
   render() {
-    console.log(this.props.bloc);
     return (
-      
-      <div>
-        {/* {this.props.bloc.display === 'column' &&
-          <div className={"feature_container " + (this.props.bloc.display === 'img_left' ? 'reverse' : '') + (this.props.bloc.display === 'column' ? 'column' : '')}>
-            <div className="align">
-              <Title title={this.props.bloc.title}/>
-              <Content content={this.props.bloc.content} />
+      <div className="container">
+        {this.props.bloc.display !== "column" && (
+          <div className="feature_container" id={this.props.id}>
+            <div
+              className={this.props.bloc.display === "img_left" ? "right" : ""}
+            >
+              <Title title={this.props.bloc.title} />
             </div>
-            <Image image={this.props.bloc.images} />
-          </div>
-        } */}
+            <div
+              className={
+                "content " +
+                (this.props.bloc.display === "img_left" ? "reverse" : "") +
+                (this.props.bloc.display === "column" ? "column" : "")
+              }
+            >
+              <Content content={this.props.bloc} />
 
-        {this.props.bloc.display !== 'column' &&
-          <div className="feature_container">
-            <div className={(this.props.bloc.display === 'img_left' ? 'right' : '')}>
-              <Title title={this.props.bloc.title}/>
-            </div>
-            <div className={"content " + (this.props.bloc.display === 'img_left' ? 'reverse' : '') + (this.props.bloc.display === 'column' ? 'column' : '')}>
-              <Content content={this.props.bloc.content} />
-              <Image image={this.props.bloc.images} />
+              <Image scrollTop={this.state.scrollTop} id={this.props.id} image={this.props.bloc.images} />
             </div>
           </div>
-        }
-        
+        )}
       </div>
     );
   }

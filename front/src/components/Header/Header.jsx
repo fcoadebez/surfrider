@@ -11,7 +11,8 @@ export default class Header extends Component {
     super(props);
     this.state = {
       nav: [],
-      homeContent: ""
+      homeContent: "",
+      agirContent: ""
     };
   }
 
@@ -21,6 +22,10 @@ export default class Header extends Component {
 
     const homeContent = await WordPress.getHomeContent();
     this.setState({ homeContent: homeContent });
+
+    const agirContent = await WordPress.getAgirContent();
+    this.setState({ agirContent: agirContent });
+
 
     
   };
@@ -45,14 +50,16 @@ export default class Header extends Component {
           </div>
           <div className="subnav">
             <div className="container">
-              {this.state.nav.map(nav => {
+              {this.state.nav.map((nav, index) => {
                 let navElements = [];
-                navElements.push(<Link to={nav.object_slug}>{nav.title}</Link>);
+                navElements.push(<Link key={index} to={nav.object_slug}>{nav.title}</Link>);
                 return navElements;
               })}
             </div>
           </div>
-          <div className="title_container">
+          
+          {this.props.home == "true" &&
+          <div className="title_container_home">
             <div className="title">
               {this.state.homeContent.acf && 
                 <h1 dangerouslySetInnerHTML={{ __html: this.state.homeContent.acf.title }}></h1>
@@ -62,6 +69,14 @@ export default class Header extends Component {
               <div className="separator"></div>
             </div>
           </div>
+          }
+          {this.props.home != "true" && this.state.agirContent.acf &&
+          <div style={{backgroundImage: 'url(' + this.state.agirContent.acf.image_header.url + ')'}} className="title_container">
+            <div className="title">
+              <h1 dangerouslySetInnerHTML={{ __html: this.state.agirContent.acf.title }}></h1>
+            </div>
+          </div>
+          }
 
           
         </header>

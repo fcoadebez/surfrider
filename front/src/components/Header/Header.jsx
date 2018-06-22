@@ -12,7 +12,8 @@ export default class Header extends Component {
     this.state = {
       nav: [],
       homeContent: "",
-      agirContent: ""
+      agirContent: "",
+      initiativesContent: ""
     };
   }
 
@@ -25,6 +26,9 @@ export default class Header extends Component {
 
     const agirContent = await WordPress.getAgirContent();
     this.setState({ agirContent: agirContent });
+
+    const initiativesContent = await WordPress.getInitiativesContent();
+    this.setState({ initiativesContent: initiativesContent });
 
 
     
@@ -70,15 +74,24 @@ export default class Header extends Component {
             </div>
           </div>
           }
-          {this.props.home != "true" && this.state.agirContent.acf &&
+          {this.props.agir == "true" && this.state.agirContent.acf &&
           <div style={{backgroundImage: 'url(' + this.state.agirContent.acf.image_header.url + ')'}} className="title_container">
             <div className="title">
               <h1 dangerouslySetInnerHTML={{ __html: this.state.agirContent.acf.title }}></h1>
             </div>
           </div>
           }
-
-          
+          {this.props.initiatives == "true" && this.state.initiativesContent.acf &&
+          <div style={{backgroundImage: 'url(' + this.state.initiativesContent.acf.image_header.url + ')'}} className="title_container">
+            <div className="title">
+              <h1 dangerouslySetInnerHTML={{ __html: this.state.initiativesContent.title.rendered }}></h1>
+            </div>
+            <div className="links">
+              <a href="#">{this.state.initiativesContent.acf.link1.title}</a>
+              <a href="#">{this.state.initiativesContent.acf.link2.title}</a>
+            </div>
+          </div>
+          }
         </header>
       </div>
     );

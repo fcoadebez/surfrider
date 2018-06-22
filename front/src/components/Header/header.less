@@ -106,10 +106,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    padding: 190px 0;
     .title {
+        
         h1 {
             font-size: 48px;
-            padding: 190px 0;
+            
             color: #FFF;
             letter-spacing: 0;
             font-weight: 400;
@@ -126,6 +129,22 @@
                 margin: 20px auto;
                 background-color: #FFCD3A;
             }
+        }
+    }
+    .links {
+        display: flex;
+        a {
+            padding: 12px 24px;
+            margin: 5px;
+            background-color: #FFCD3A;
+            // font-family: RobotoCondensed-Regular;
+            font-size: 16px;
+            color: #232323;
+            letter-spacing: -1px;
+            text-decoration: none;
+            text-transform: uppercase;
+            display: flex;
+            align-items: center;
         }
     }
 }

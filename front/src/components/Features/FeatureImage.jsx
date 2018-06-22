@@ -13,9 +13,10 @@ export default class FeatureImage extends Component {
   componentWillMount = () => {};
 
   render() {
+    console.log(this.props.image)
     return (
       <div className="feature_images">
-        {this.props.image.map((image, index) => {
+        {this.props.image && this.props.image.map((image, index) => {
           let blocElements = [];
           if (index == 0) {
             blocElements.push(

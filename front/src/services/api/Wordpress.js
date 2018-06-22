@@ -23,6 +23,13 @@ class WordPress {
     );
     return agirContent.json();
   }
+
+  async getInitiativesContent() {
+    const agirContent = await fetch(
+      endPoints.basepath + "/wp-json/wp/v2/pages/313"
+    );
+    return agirContent.json();
+  }
 }
 
 export default new WordPress();

@@ -40,112 +40,122 @@ class Home extends Component {
       <div>
         <Header home="true" />
       <div className="features">
-        {this.state.homeContent.acf &&
-          this.state.homeContent.acf.blocs.map((bloc, index) => {
-            let feature = "feature" + (index + 1);
-            let blocElements = [];
-            if (index == 0) {
-              blocElements.push(
-                <div key={index} className="first_feature">
-                  <img className="img_top" src={img_top} />
-                  <FeatureContainer id={feature} bloc={bloc} />
-                </div>);
-            } else if (index == 1) {
-              blocElements.push(
-                <div key={index} className="last_feature feature_black">
-                  <Plx
-                    className="imageParallax"
-                    parallaxData={[
-                      {
-                        start: 1300,
-                        end: 1600,
-                        properties: [
-                          {
-                            startValue: 0,
-                            endValue: 1,
-                            property: "opacity"
-                          }
-                        ]
-                      }
-                    ]}
-                  >
-                    <img className="parallax parallax1" src={parallax1} />
-                  </Plx>
+        
+          {this.state.homeContent.acf &&
+            this.state.homeContent.acf.blocs.map((bloc, index) => {
+              let feature = "feature" + (index + 1);
+              let blocElements = [];
+              if (index == 0) {
+                blocElements.push(
                   
-                  <FeatureContainer id={feature} bloc={bloc} />
-                </div>);
-            } else if (index == 2) {
-              blocElements.push(
-                <div key={index} className="last_feature feature_black">
-                <Plx
-                    className="parallax2_container"
-                    parallaxData={[
-                      {
-                        start: 2300,
-                        end: 2900,
-                        properties: [
-                          {
-                            startValue: 0,
-                            endValue: 0.25,
-                            property: "opacity"
-                          },
-                          {
-                            startValue: 130,
-                            endValue: 80,
-                            property: "translateY"
-                          },
-                          {
-                            startValue: -100,
-                            endValue: 50,
-                            property: "translateX"
-                          }
-                        ]
-                      }
-                    ]}
-                  >
-                    <img className="parallax parallax2" src={parallax2} />
-                  </Plx>
-                  <FeatureContainer id={feature} bloc={bloc} />
-                </div>);
-            } else if (index == 3) {
-              blocElements.push(
-                <div key={index} className="last_feature feature_black">
-                <Plx
-                    className="parallax3_container"
-                    parallaxData={[
-                      {
-                        start: 2700,
-                        end: 3200,
-                        properties: [
-                          {
-                            startValue: 0,
-                            endValue: 0.25,
-                            property: "opacity"
-                          },
-                          {
-                            startValue: 200,
-                            endValue: -140,
-                            property: "translateX"
-                          }
-                        ]
-                      }
-                    ]}
-                  >
-                    <img className="parallax parallax3" src={parallax3} />
-                  </Plx>
+                  <div key={index} className="first_feature">
+                    <img className="img_top" src={img_top} />
+                    <div className="container">
+                    <FeatureContainer id={feature} bloc={bloc} />
+                  </div></div>);
+              } else if (index == 1) {
+                blocElements.push(
+                  <div key={index} className="last_feature feature_black">
+                    <Plx
+                      className="imageParallax"
+                      parallaxData={[
+                        {
+                          start: 1300,
+                          end: 1600,
+                          properties: [
+                            {
+                              startValue: 0,
+                              endValue: 1,
+                              property: "opacity"
+                            }
+                          ]
+                        }
+                      ]}
+                    >
+                      <img className="parallax parallax1" src={parallax1} />
+                    </Plx>
+                    <div className="container">
+                    <FeatureContainer id={feature} bloc={bloc} />
+                    </div>
+                  </div>);
+              } else if (index == 2) {
+                blocElements.push(
+                  <div key={index} className="last_feature feature_black">
+                  <Plx
+                      className="parallax2_container"
+                      parallaxData={[
+                        {
+                          start: 2300,
+                          end: 2900,
+                          properties: [
+                            {
+                              startValue: 0,
+                              endValue: 0.25,
+                              property: "opacity"
+                            },
+                            {
+                              startValue: 130,
+                              endValue: 80,
+                              property: "translateY"
+                            },
+                            {
+                              startValue: -100,
+                              endValue: 50,
+                              property: "translateX"
+                            }
+                          ]
+                        }
+                      ]}
+                    >
+                      <img className="parallax parallax2" src={parallax2} />
+                    </Plx>
+                    <div className="container">
+                    <FeatureContainer id={feature} bloc={bloc} />
+                    </div>
+                  </div>);
+              } else if (index == 3) {
+                blocElements.push(
+                  <div key={index} className="last_feature feature_black">
+                  <Plx
+                      className="parallax3_container"
+                      parallaxData={[
+                        {
+                          start: 2700,
+                          end: 3200,
+                          properties: [
+                            {
+                              startValue: 0,
+                              endValue: 0.25,
+                              property: "opacity"
+                            },
+                            {
+                              startValue: 200,
+                              endValue: -140,
+                              property: "translateX"
+                            }
+                          ]
+                        }
+                      ]}
+                    >
+                      <img className="parallax parallax3" src={parallax3} />
+                    </Plx>
 
-                  <img className="img_bottom" src={img_bottom} />
-                  <FeatureContainer id={feature} bloc={bloc} />
-                </div>);
-            } else {
-              blocElements.push(
-                <div key={index} className="feature_black">
-                  <FeatureContainer id={feature} bloc={bloc} />
-                </div>);
-            }
+                    <img className="img_bottom" src={img_bottom} />
+                    <div className="container">
+                    <FeatureContainer id={feature} bloc={bloc} />
+                    </div>
+                  </div>);
+              } else {
+                blocElements.push(
+                  <div key={index} className="feature_black">
+                  <div className="container">
+                    <FeatureContainer id={feature} bloc={bloc} />
+                    </div>
+                  </div>);
+              }
 
-            return blocElements;
-          })}
+              return blocElements;
+            })}
           
       </div>
       

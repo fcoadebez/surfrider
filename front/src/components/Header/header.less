@@ -1,0 +1,153 @@
+.nav {
+    background-color: #131313;
+    padding: 19px 0;
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .links {
+            display: flex;
+            a {
+                padding: 12px;
+                margin: 5px;
+                background-color: #232323;
+                // font-family: RobotoCondensed-Regular;
+                font-size: 16px;
+                color: #232323;
+                letter-spacing: -1px;
+                text-decoration: none;
+                text-transform: uppercase;
+                display: flex;
+                align-items: center;
+                &.yellow {
+                    background-color: #FFCD3A;
+                    padding: 12px 24px;
+                }
+                img {
+                    width: 20px;
+                }
+            }
+        }
+    }
+}
+.subnav {
+    background-color: rgba(19,19,19,0.45);
+    padding: 12px 0;
+    a {
+        font-size: 16px;
+        color: #FFFFFF;
+        letter-spacing: 0;
+        text-transform: uppercase;
+        margin-right: 20px;
+        text-decoration: none;
+        opacity: 1;
+        transition: opacity 0.2s linear;
+        &:hover {
+            opacity: 0.6;
+        }
+    }
+}
+.title_container_home {
+    height: 1200px;
+    width: 100%;
+    background-image: url('../../assets/DESIGN/header_home.jpg');
+    background-position: bottom;
+    background-size: cover;
+    position: relative;
+    bottom: 43px;
+    z-index: -1;
+    display: flex;
+    justify-content: center;
+    .title {
+        position: relative;
+        top: 140px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h1 {
+            font-size: 48px;
+            color: #FFF;
+            letter-spacing: 0;
+            font-weight: 400;
+            margin-bottom: 0;
+            span {
+                font-weight: bold;
+            }
+        }
+        .separator {
+            width: 1px;
+            height: 52px;
+            background-color: #FFF;
+            margin: 0px 0 20px 0;
+            position: relative;
+            animation: lineanimation 1.3s infinite linear;
+        }
+        @keyframes lineanimation {
+            0%   {top: 0px; opacity: 0; height: 0;}
+            50%  {top: 10px; opacity: 0.7;}
+            100% {top: 20px; opacity: 0; height: 52px;}
+        }
+        p {
+            margin-top: 80px;
+            font-size: 16px;
+            color: #FFF;
+            text-transform: uppercase;
+        }
+    }
+}
+.title_container {
+    width: 100%;
+    background-position: bottom;
+    // background-image: url('../../assets/agir/header_fond.jpg');
+    background-size: cover;
+    position: relative;
+    bottom: 43px;
+    z-index: -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 190px 0;
+    .title {
+        
+        h1 {
+            font-size: 48px;
+            
+            color: #FFF;
+            letter-spacing: 0;
+            font-weight: 400;
+            margin-bottom: 0;
+            text-transform: uppercase;
+            span {
+                font-weight: bold;
+            }
+            &:after {
+                display: block;
+                content:"";
+                width: 80px;
+                height: 10px;
+                margin: 20px auto;
+                background-color: #FFCD3A;
+            }
+        }
+    }
+    .links {
+        display: flex;
+        a {
+            padding: 12px 24px;
+            margin: 5px;
+            background-color: #FFCD3A;
+            // font-family: RobotoCondensed-Regular;
+            font-size: 16px;
+            color: #232323;
+            letter-spacing: -1px;
+            text-decoration: none;
+            text-transform: uppercase;
+            display: flex;
+            align-items: center;
+        }
+    }
+}
+.logo {
+    height: 42px;
+}

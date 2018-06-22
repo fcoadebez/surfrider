@@ -1,0 +1,94 @@
+.actions {
+  background-color: white;
+  position: relative;
+  bottom: 160px;
+  box-shadow: 0 0 44px 0 rgba(0,0,0,0.07);
+  h2 {
+    font-size: 48px;
+    color: #183B4F;
+    letter-spacing: -3px;
+    text-align: center;
+    line-height: 50px;
+    font-weight: 300;
+    padding: 60px 0 0 0;
+  }
+  
+  .action_container {
+    padding: 0px 80px;
+    &:nth-child(odd) {
+      .action {
+        flex-direction: row-reverse;
+        .content {
+          padding-left: 50px;
+          padding-right: 0;
+          p, h3 {
+            text-align: right;
+          }
+        }
+        a {
+          margin: 25px 0 auto auto;
+        }
+      }
+      
+    }
+    .action {
+      border-bottom: 1px solid #EEEEEE;
+      padding: 30px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      
+      &.no-border {
+        border: none;
+      }
+      h3 {
+        font-weight: bold;
+        font-size: 26px;
+        color: #183B4F;
+        letter-spacing: 0;
+      }
+      p {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 18px;
+        color: #5E5E5E;
+        letter-spacing: 0;
+      }
+      a {
+        background-color: #FFCD3A;
+        padding: 12px 24px;
+        font-size: 16px;
+        color: #232323;
+        letter-spacing: -1px;
+        text-decoration: none;
+        text-transform: uppercase;
+        display: table;
+        margin: 25px auto auto 0;
+      }
+      .content {
+        padding-right: 50px;
+        width: 50%;
+      }
+      .image {
+        width: 50%;
+        text-align: center;
+      }
+    }
+  }
+}
+.action_parallax {
+  position: relative;
+  .left_action {
+    left: -400px;
+    bottom: -100px;
+    width: 1168px;
+    position: absolute;
+    z-index: -1;
+  }
+  .right_action {
+    right: -300px;
+    top: 200px;
+    width: 863px;
+    position: absolute;
+    z-index: -1;
+  }
+}
